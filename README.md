@@ -66,4 +66,5 @@ u_b = np.array([81, 211, 255]) #범위를 결정하기 위해서
 2. python source myvenv/Script/activates (가상환경 실행)
 3. pip install -r requirements.txt (의존성 모듈 설치)
 4. python volleyball.py
+5. 만약 내장된 웹캠일 경우 20번째 줄 cv2.VideoCapture(0)으로 수정
 ~~~
