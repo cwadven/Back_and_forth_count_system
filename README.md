@@ -42,7 +42,7 @@ u_b = np.array([81, 211, 255]) #범위를 결정하기 위해서
 
 <h3 align="center">왔다-갔다하는 장면</h3>
 <p align="center">
-<img alt="volley_ball" src="https://github.com/cwadven/volley_ball/blob/master/assets/seq4.PNG"/>
+<img alt="volley_ball" src="https://github.com/cwadven/Back_and_forth_count_system/blob/master/assets/seq4.PNG"/>
 </p>
 
 ~~~
