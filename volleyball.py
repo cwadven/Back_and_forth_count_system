@@ -17,11 +17,10 @@ cv2.createTrackbar("UV", "Tracking", 255, 255, nothing)
 #red : LH : 0 , LS : 153, LV : 0, UH : 5, US : 255, UV : 255
 #red : LH : 0 , LS : 137, LV : 123, UH : 7, US : 255, UV : 255
 #blue : LH :84, LS : 120, LV : 74, UH : 255, US : 255, UV : 255
-
-cap = cv2.VideoCapture(0) #비디오 찍기
-cap.set(cv2.CAP_PROP_FPS, 60) #프레임 속도를 내가 원하는 것으로 설정 (30이상 안되는듯...)
+cap = cv2.VideoCapture(1) #비디오 찍기
+# cap.set(cv2.CAP_PROP_FPS, 60) #프레임 속도를 내가 원하는 것으로 설정 (30이상 안되는듯...)
 fps = cap.get(cv2.CAP_PROP_FPS) #프레임 속도를 측정
-print(fps)
+# print(fps)
 ret, frame = cap.read() #찍은 프레임 하나를 읽어옴
 
 (height, width) = frame.shape[:2] #프레임하나를 읽어와서 해당 높이와 너비를 가져옴
@@ -55,9 +54,9 @@ while True:
     u_s = cv2.getTrackbarPos("US", "Tracking")
     u_v = cv2.getTrackbarPos("UV", "Tracking")
     
-    
-    l_b = np.array([84, 120, 74]) #범위를 결정하기 위해서
-    u_b = np.array([255, 255, 255]) #범위를 결정하기 위해서
+    # 필터링 할 색, 명도, 채도
+    l_b = np.array([l_h, l_s, l_v]) #범위를 결정하기 위해서
+    u_b = np.array([u_h, u_s, u_v]) #범위를 결정하기 위해서
 
     mask = cv2.inRange(hsv, l_b, u_b) #마스크 씌우기!
 
@@ -85,9 +84,10 @@ while True:
                 change = 0
                 
             cv2.drawContours(frame, [contours[i]], 0, (0, 0, 255), 2)
-            cv2.putText(frame, str(i), tuple(contours[i][0][0]), cv2.FONT_HERSHEY_COMPLEX, 0.8, (0, 255, 0), 1)
-            
+            cv2.putText(frame, str('A'), tuple(contours[i][0][0]), cv2.FONT_HERSHEY_COMPLEX, 0.8, (0, 255, 0), 1)
+    
+    # count 세기
+    cv2.putText(frame, str(count), (10, 30), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 0, 0), 1)
             
     cv2.line(frame, (0, int(center)), (width, int(center)), (0, 255, 0), 2) #중앙선 넘는지 보이기
     cv2.imshow("src", frame)
-    print(count)
