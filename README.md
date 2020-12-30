@@ -10,14 +10,14 @@
 
 <h3 align="center">프로그램</h3>
 <p align="center">
-<img alt="volley_ball" src="https://github.com/cwadven/volley_ball/blob/master/assets/seq1.PNG"/>
+<img alt="Back_and_forth_count_system" src="https://github.com/cwadven/Back_and_forth_count_system/blob/master/assets/seq1.PNG"/>
 </p>
 
 ## 사용 방법
 
 <h3 align="center">Tracking을 조작 하여 색깔 분류 시키기</h3>
 <p align="center">
-<img alt="volley_ball" src="https://github.com/cwadven/volley_ball/blob/master/assets/seq2.PNG"/>
+<img alt="Back_and_forth_count_system" src="https://github.com/cwadven/Back_and_forth_count_system/blob/master/assets/seq2.PNG"/>
 </p>
 
 ~~~
@@ -26,7 +26,7 @@ Tracking 스크롤 바를 이용하여 원하는 색상을 추출한다.
 
 <h3 align="center">특정색 추출</h3>
 <p align="center">
-<img alt="volley_ball" src="https://github.com/cwadven/volley_ball/blob/master/assets/seq2.PNG"/>
+<img alt="Back_and_forth_count_system" src="https://github.com/cwadven/Back_and_forth_count_system/blob/master/assets/seq2.PNG"/>
 </p>
 
 ~~~
